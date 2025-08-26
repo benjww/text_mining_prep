@@ -4,6 +4,10 @@ import os
 #Sets the current working directory to be the same as the file
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
+# Create the directory to save sentence files in
+if not os.path.exists('sentences'):
+    os.makedirs('sentences')
+
 # Convert files from markup language into text file inputs for CatMiner
 rsc_to_sentences('RSC_HTMLs/', 'sentences/')
 elsevier_to_sentences('Elsevier_XMLs/', 'sentences/')

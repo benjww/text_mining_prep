@@ -12,6 +12,10 @@ dois = dois_df[dois_df['Publisher'] == 'Springer Science and Business Media LLC'
 
 key = 'PLACEHOLDER'
 
+# Create the directory to save XML files in
+if not os.path.exists('XMLs/Springer_Nature'):
+    os.makedirs('XMLs/Springer_Nature')
+
 for i in range(len(dois)):
 
     doi = dois[i]

@@ -24,7 +24,7 @@ def rsc_to_sentences(source_path, target_path):
 
         # define file path
         file_path = source_path + filenames[i]
-        print(file_path)
+        #print(file_path)
 
         # read as Document
         try:
@@ -81,7 +81,7 @@ def elsevier_to_sentences(source_path, target_path):
 
     for i in range(len(filenames)):
 
-        print(filenames[i])
+        #print(filenames[i])
 
         # define file path
         file_path = source_path + filenames[i]

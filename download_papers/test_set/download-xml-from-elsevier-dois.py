@@ -16,6 +16,10 @@ headers = {
 dois_df = pd.read_csv('OA-and-pub-info.csv')
 dois = dois_df[dois_df['Publisher'] == 'Elsevier BV']['DOI'].to_list()
 
+# Create the directory to save XML files in
+if not os.path.exists('XMLs/Elsevier'):
+    os.makedirs('XMLs/Elsevier')
+
 print(f'Beginning to save XML files for {len(dois)} Elsevier DOIs...')
 
 for i in range(len(dois)):
